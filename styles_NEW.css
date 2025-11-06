@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: white;
+  width: 1280px;
+  height: 720px;
+  margin: 0 auto;
+  overflow: hidden; /* чтобы не было скролла */
+}
+
+/* Шапка (navbar) */
+.centered {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1280px;
+  background-color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 40px;
+  border: 2px solid black;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 15px;
+  flex-grow: 1;
+  justify-content: space-between; /* Распределяет элементы равномерно */
+  margin-left: 20px; /* Отступ от логотипа */
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar li img {
+  width: 200px;
+  height: auto;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s;
+  flex-shrink: 0; /* Чтобы кнопки не сжимались */
+}
+
+.navbar a:hover {
+  transform: scale(1.05);
+}
+
+/* Кнопки */
+.Главная {
+  background-color: #ED7979;
+}
+
+.О_нас {
+  background-color: #B7E6A8;
+}
+
+.Направления {
+  background-color: #84BCDF;
+}
+
+.Контакты {
+  background-color: #F2C57F;
+}
+
+/* Главное изображение */
+.main-content {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  object-fit: cover;
+  border-radius: 60px;
+  box-sizing: border-box;
+}
+
+/* Футер */
+.footer {
+  width: 100%;
+  background-color: black;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.footer p {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-logo {
+  background-color: white;
+  width: 100px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 20px;
+}
