@@ -1,0 +1,17 @@
+{
+  "name": "project-lox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "soda.js",
+  "scripts": {
+    "dev": "nodemon soda"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "expess": "^0.0.1-security",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  }
+}

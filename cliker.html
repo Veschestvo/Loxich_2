@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cliker_styles.css">
+    <title>Счетчик</title>
+</head>
+<body>
+    <div class="counter-container">
+        <h2>Счетчик</h2>
+        <div class="counter-value" id="counter">0</div>
+
+        <div class="controls">
+            <button id="decrement">-</button>
+            <button id="reset">Сброс</button>
+            <button id="increment">+</button>
+        </div>
+
+        <div style="margin-top: 15px;">
+            <input type="text" id="inputNumber" placeholder="Введите число">
+            <button class="set-btn" id="setButton">Установить</button>
+        </div>
+    </div>
+
+    <script>
+
+        const counterElement = document.getElementById('counter');
+        const incrementButton = document.getElementById('increment');
+        const decrementButton = document.getElementById('decrement');
+        const resetButton = document.getElementById('reset');
+        const setButton = document.getElementById('setButton');
+        const inputNumber = document.getElementById('inputNumber');
+
+        
+        let count = 0;
+
+        
+        function updateCounter() {
+            counterElement.textContent = count;
+        }
+
+        
+        incrementButton.addEventListener('click', () => {
+            count++;
+            updateCounter();
+        });
+
+        
+        decrementButton.addEventListener('click', () => {
+            count--;
+            updateCounter();
+        });
+
+
+        resetButton.addEventListener('click', () => {
+            count = 0;
+            updateCounter();
+        });
+
+
+        setButton.addEventListener('click', () => {
+            const inputValue = inputNumber.value.trim();
+            if (inputValue !== '') {
+                const number = parseInt(inputValue);
+                if (!isNaN(number)) {
+                    count = number;
+                    updateCounter();
+                } else {
+                    alert('Фигня, переделывай');
+                }
+            } else {
+                alert('А где хоть что-то?');
+            }
+            inputNumber.value = '';
+        });
+
+
+        updateCounter();
+    </script>
+</body>
+</html>
